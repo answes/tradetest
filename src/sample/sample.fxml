@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane minHeight="710" minWidth="1000" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <VBox spacing="5" AnchorPane.topAnchor="10">
+        <HBox alignment="CENTER_LEFT" spacing="30">
+            <Label id="fileName" fx:id="name" text="文件：" />
+            <Button fx:id="chooseFile" text="选择文件" />
+            <HBox alignment="CENTER" spacing="5">
+                <Label text="请求ip地址" />
+                <TextField fx:id="ip" promptText="请求ip地址" text="118.89.60.197" />
+            </HBox>
+            <HBox alignment="CENTER" spacing="5">
+                <Label text="交易市场id" />
+                <TextField fx:id="market" promptText="交易市场id" text="6" />
+            </HBox>
+            <HBox alignment="CENTER" spacing="5">
+                <Label text="登陆方式" />
+                <ComboBox fx:id="comboBox" prefWidth="150.0" />
+            </HBox>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" spacing="30">
+            <HBox alignment="CENTER" spacing="5">
+                <Label text="交易类型" />
+                <ComboBox fx:id="type" prefWidth="150.0" />
+            </HBox>
+            <HBox alignment="CENTER" spacing="5">
+                <Label text="交易价格" />
+                <TextField fx:id="price" promptText="交易价格" text="5" />
+            </HBox>
+            <HBox alignment="CENTER" spacing="5">
+                <Label text="交易数量" />
+                <TextField fx:id="number" promptText="交易数量" text="5" />
+            </HBox>
+            <HBox fx:id="zaraBox" alignment="CENTER" spacing="5">
+                <Label id="fileName" text="选择原单：" />
+                <Button fx:id="chooseZara" text="选择原单文件" />
+            </HBox>
+        </HBox>
+
+
+        <HBox alignment="CENTER" spacing="30">
+            <HBox alignment="CENTER" spacing="10">
+                <Label text="循环次数" />
+                <TextField fx:id="forNum" promptText="循环次数" text="1" />
+            </HBox>
+            <Button fx:id="start" prefWidth="100" style="-fx-background-color: deepskyblue" text="开始" />
+        </HBox>
+    </VBox>
+    <TextArea fx:id="log" prefHeight="600" prefWidth="950" style="-fx-background-color: aquamarine" AnchorPane.topAnchor="100" AnchorPane.leftAnchor="10" AnchorPane.bottomAnchor="10" AnchorPane.rightAnchor="10"/>
+</AnchorPane>
